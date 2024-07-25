@@ -54,9 +54,6 @@ class SharpEdgesFromUvIslands(Operator):
                     if l[uv].select:
                         initial_selection[ob].add(l.index)
 
-            ob.data.use_auto_smooth = True
-            ob.data.auto_smooth_angle = 3.14159
-
         bpy.ops.uv.reveal()
         bpy.ops.uv.select_all(action='SELECT')
         if not self.use_existing_seams:
